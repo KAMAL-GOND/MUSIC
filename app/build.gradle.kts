@@ -1,7 +1,4 @@
-val implementation: Unit
-    get() {
-        TODO()
-    }
+val implementation: Unit = Unit
 
 plugins {
     alias(libs.plugins.android.application)

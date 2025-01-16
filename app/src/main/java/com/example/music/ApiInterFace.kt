@@ -9,7 +9,8 @@ interface ApiInterFace {
 
 
 
-    @Headers("x-rapidapi-host: deezerdevs-deezer.p.rapidapi.com","x-rapidapi-key: 81018dfb9bmsh0544d1c16b6b180p1ae9b8jsn2c705c1f713b")
+    @Headers("x-rapidapi-key: 81018dfb9bmsh0544d1c16b6b180p1ae9b8jsn2c705c1f713b",
+        "x-rapidapi-host: deezerdevs-deezer.p.rapidapi.com")
 
     @GET("Search")
     fun getData(@Query("q") query:String): Call<MyData>

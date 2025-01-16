@@ -24,15 +24,18 @@ class MainActivity : AppCompatActivity() {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
             insets
         }
-        val retrofitBuilder= Retrofit.Builder().baseUrl("https://deezerdevs-deezer.p.rapidapi.com/").addConverterFactory(GsonConverterFactory.create())
-            .build().create(ApiInterFace::class.java)
+        val retrofitBuilder= Retrofit.Builder()
+            .baseUrl("https://deezerdevs-deezer.p.rapidapi.com/")
+            .addConverterFactory(GsonConverterFactory.create())
+            .build()
+            .create(ApiInterFace::class.java)
 
         val retrofitData = retrofitBuilder.getData("eminem")
         retrofitData.enqueue(object : Callback<MyData?> {
             override fun onResponse(p0: Call<MyData?>, p1: Response<MyData?>) {
-                val dataList: MyData? = p1.body()
-                val textVeiw= findViewById<TextView>(R.id.hello)
-                textVeiw.text=dataList.toString()
+                val dataList = p1.body()?.data
+                val textView= findViewById<TextView>(R.id.hello)
+                textView.text=dataList.toString()
                 Log.d("TAG: onResponse:","onResponse "+p1.body())
 
 
