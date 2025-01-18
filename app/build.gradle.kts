@@ -49,4 +49,5 @@ dependencies {
     androidTestImplementation(libs.androidx.espresso.core)
     implementation(libs.retrofit)
     implementation (libs.convertorgson)
+    implementation(libs.piccaso)
 }

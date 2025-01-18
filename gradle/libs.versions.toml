@@ -11,6 +11,7 @@ activity = "1.9.3"
 constraintlayout = "2.2.0"
 retrofit = "2.11.0"
 convertorgson = "2.11.0"
+piccaso="2.8"
 
 
 [libraries]
@@ -24,6 +25,8 @@ androidx-activity = { group = "androidx.activity", name = "activity", version.re
 androidx-constraintlayout = { group = "androidx.constraintlayout", name = "constraintlayout", version.ref = "constraintlayout" }
 retrofit = { module = "com.squareup.retrofit2:retrofit", version.ref = "retrofit"}
 convertorgson = { module = "com.squareup.retrofit2:converter-gson", version.ref = "convertorgson"}
+piccaso ={ module = "com.squareup.picasso:picasso", version.ref = "piccaso"}
+
 
 
 
@@ -31,5 +34,6 @@ convertorgson = { module = "com.squareup.retrofit2:converter-gson", version.ref 
 [plugins]
 android-application = { id = "com.android.application", version.ref = "agp" }
 kotlin-android = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin" }
+
 
 
